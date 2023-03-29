@@ -1,0 +1,15 @@
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Social.Media.Application.deps.json
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Social.Media.Application.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Social.Media.Application.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Socail.Media.Core.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.csproj.AssemblyReference.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.AssemblyInfoInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.AssemblyInfo.cs
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.csproj.CoreCompileInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.csproj.CopyComplete
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\refint\Social.Media.Application.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\ref\Social.Media.Application.dll

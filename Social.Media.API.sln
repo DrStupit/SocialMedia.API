@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Media.API", "Social.Media.API\Social.Media.API.csproj", "{407145BB-3E87-4C6E-B317-51F236C39AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socail.Media.Core", "Socail.Media.Core\Socail.Media.Core.csproj", "{1DFA21FC-3C17-49F2-A283-207C9F241A83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Media.Application", "Social.Media.Application\Social.Media.Application.csproj", "{5F27791E-B058-4A04-922D-05CDC7EF0762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Media.Infrastructure", "Social.Media.Infrastructure\Social.Media.Infrastructure.csproj", "{1B0F9D69-2556-4AC4-AE80-32F1ACD1E44F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{407145BB-3E87-4C6E-B317-51F236C39AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407145BB-3E87-4C6E-B317-51F236C39AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407145BB-3E87-4C6E-B317-51F236C39AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407145BB-3E87-4C6E-B317-51F236C39AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFA21FC-3C17-49F2-A283-207C9F241A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFA21FC-3C17-49F2-A283-207C9F241A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFA21FC-3C17-49F2-A283-207C9F241A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFA21FC-3C17-49F2-A283-207C9F241A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F27791E-B058-4A04-922D-05CDC7EF0762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F27791E-B058-4A04-922D-05CDC7EF0762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F27791E-B058-4A04-922D-05CDC7EF0762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F27791E-B058-4A04-922D-05CDC7EF0762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0F9D69-2556-4AC4-AE80-32F1ACD1E44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0F9D69-2556-4AC4-AE80-32F1ACD1E44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0F9D69-2556-4AC4-AE80-32F1ACD1E44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0F9D69-2556-4AC4-AE80-32F1ACD1E44F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

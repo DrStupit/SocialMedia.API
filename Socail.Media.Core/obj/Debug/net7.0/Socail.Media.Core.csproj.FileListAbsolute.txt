@@ -1,0 +1,12 @@
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Socail.Media.Core.deps.json
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Socail.Media.Core.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.csproj.AssemblyReference.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.AssemblyInfoInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.AssemblyInfo.cs
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.csproj.CoreCompileInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\refint\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\ref\Socail.Media.Core.dll

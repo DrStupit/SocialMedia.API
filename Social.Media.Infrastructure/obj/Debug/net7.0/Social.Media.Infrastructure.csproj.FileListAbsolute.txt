@@ -1,0 +1,17 @@
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Social.Media.Infrastructure.deps.json
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Social.Media.Infrastructure.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Social.Media.Infrastructure.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Social.Media.Application.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Social.Media.Application.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\bin\Debug\net7.0\Socail.Media.Core.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.AssemblyInfo.cs
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.csproj.CopyComplete
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\refint\Social.Media.Infrastructure.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\Social.Media.Infrastructure.pdb
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Infrastructure\obj\Debug\net7.0\ref\Social.Media.Infrastructure.dll
