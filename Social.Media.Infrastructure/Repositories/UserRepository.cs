@@ -109,4 +109,16 @@ public class UserRepository : IUserRepository
             return result;
         }
     }
+
+    public async Task InsertJwtToken(UserTokens userToken)
+    {
+        var sql = "INSERT INTO UserTokens " +
+                  "(UserId,Token,Expiration_Time)" +
+                  "VALUES (@UserId,@Token,@Expiration_Time)";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var result = await connection.ExecuteAsync(sql, userToken);
+        }
+    }
 }

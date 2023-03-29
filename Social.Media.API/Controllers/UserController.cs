@@ -27,13 +27,6 @@ public class UserController : ControllerBase
         return Ok(user);
     }
 
-    [HttpGet("{id:int}", Name = "GetUserById")]
-    public async Task<ActionResult> GetUserById(int id)
-    {
-        var user = await _mediator.Send(new GetUserByIdQuery(id));
-        return Ok(user);
-    }
-
     [HttpGet]
     [Route("login")]
     public async Task<ActionResult> UserLogin([FromBody] UserLoginRequest ulr)
@@ -51,6 +44,13 @@ public class UserController : ControllerBase
                     GuidId = Guid.NewGuid(),
                     Id = user.Id,
                 }, _jwtSettings);
+                var jwtUser = new UserTokens
+                {
+                    Token = token.Token,
+                    Expiration_Time = DateTime.UtcNow.AddDays(1),
+                    UserId = user.Id
+                };
+                await _mediator.Send(new AddJwtTokenCommand(jwtUser));
                 user.Token = token.Token;
             }
             else
