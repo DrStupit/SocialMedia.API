@@ -121,4 +121,15 @@ public class UserRepository : IUserRepository
             var result = await connection.ExecuteAsync(sql, userToken);
         }
     }
+
+    public async Task<UserTokens> GetJwtTokenByUserId(int userId)
+    {
+        var sql = "SELECT TOP 1 * FROM UserTokens WHERE UserId = @UserId";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var result = await connection.QueryFirstOrDefaultAsync<UserTokens>(sql, new { UserId = userId });
+            return result;
+        }
+    }
 }

@@ -38,20 +38,33 @@ public class UserController : ControllerBase
 
             if (user != null)
             {
-                token = JwtHelper.GenTokenKey(new UserToken()
+                var retrievedToken = await _mediator.Send(new GetJwtTokenByUserId(user.Id));
+                if (retrievedToken != null)
                 {
-                    EmailAddress = user.Email,
-                    GuidId = Guid.NewGuid(),
-                    Id = user.Id,
-                }, _jwtSettings);
-                var jwtUser = new UserTokens
+                    if (retrievedToken.Expiration_Time > DateTime.Now)
+                    {
+                        //this is a valid token
+                        user.Token = retrievedToken.Token;
+                    }
+                }
+                else
                 {
-                    Token = token.Token,
-                    Expiration_Time = DateTime.UtcNow.AddDays(1),
-                    UserId = user.Id
-                };
-                await _mediator.Send(new AddJwtTokenCommand(jwtUser));
-                user.Token = token.Token;
+                    token = JwtHelper.GenTokenKey(new UserToken()
+                    {
+                        EmailAddress = user.Email,
+                        GuidId = Guid.NewGuid(),
+                        Id = user.Id,
+                    }, _jwtSettings);
+                
+                    var jwtUser = new UserTokens
+                    {
+                        Token = token.Token,
+                        Expiration_Time = DateTime.UtcNow.AddDays(1),
+                        UserId = user.Id
+                    };
+                    await _mediator.Send(new AddJwtTokenCommand(jwtUser));
+                    user.Token = token.Token;
+                }
             }
             else
             {
