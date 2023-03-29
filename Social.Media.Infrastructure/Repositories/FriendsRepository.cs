@@ -51,4 +51,17 @@ public class FriendsRepository : IFriendRepository
             return result.ToList();
         }
     }
+
+    public async Task<Friends> AcceptFriendRequest(int friendId)
+    {
+        var sql = "UPDATE Friends " +
+                  "SET IsAccepted = 1 " +
+                  "WHERE FriendId = @FriendId";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var friend = await connection.QueryFirstOrDefaultAsync<Friends>(sql, new { FriendId = friendId });
+            return friend;
+        }
+    }
 }

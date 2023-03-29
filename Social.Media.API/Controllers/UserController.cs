@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using Socail.Media.Core.Models;
 using Social.Media.API.Commands;
 using Social.Media.API.Queries;

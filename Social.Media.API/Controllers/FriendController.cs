@@ -33,6 +33,13 @@ public class FriendController: ControllerBase
         var friendList = await _mediator.Send(new GetFriendListByUserIdQuery(userId));
         return Ok(friendList);
     }
+
+    [HttpPost("{friendId:int}")]
+    public async Task<ActionResult> AcceptFriendRequest(int friendId)
+    {
+        var friendRequest = await _mediator.Send(new AcceptFriendRequestQuery(friendId));
+        return Ok(friendRequest);
+    }
     [HttpDelete("{friendId:int}")]
     public async Task<ActionResult> RemoveFriendById(int friendId)
     {
