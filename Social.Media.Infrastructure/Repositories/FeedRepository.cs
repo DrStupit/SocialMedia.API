@@ -38,7 +38,7 @@ public class FeedRepository : IFeedRepository
         var sql = "INSERT INTO Feed " +
                   "(UserID,Caption,ImageURL,PostDate,Location,FishingMethod," +
                   "CommentCount,LikeCount,CreatedDate,ModifiedDate) " +
-                  "VALUES (@UserID,@Caption,@ImageURL,@PostDate,@Location" +
+                  "VALUES (@UserID,@Caption,@ImageURL,@PostDate,@Location, " +
                   "@FishingMethod,@CommentCount,@LikeCount,@CreatedDate,@ModifiedDate)";
         using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
         {
