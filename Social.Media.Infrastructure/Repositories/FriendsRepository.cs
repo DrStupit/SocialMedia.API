@@ -40,4 +40,15 @@ public class FriendsRepository : IFriendRepository
             return result;
         }
     }
+
+    public async Task<List<Friends>> GetUsersFriends(int userId)
+    {
+        var sql = "SELECT * FROM Friends WHERE UserId = @UserId AND IsAccepted = 1";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var result =  await connection.QueryAsync<Friends>(sql, new {UserId = userId});
+            return result.ToList();
+        }
+    }
 }

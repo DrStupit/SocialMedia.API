@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Socail.Media.Core.Models;
 using Socail.Media.Core.Models.Friends;
 using Social.Media.API.Commands;
+using Social.Media.API.Queries;
 
 namespace Social.Media.API.Controllers;
 
@@ -26,6 +27,12 @@ public class FriendController: ControllerBase
         return Ok(friend);
     }
 
+    [HttpGet("{userId:int}")]
+    public async Task<ActionResult> GetUserFriendList(int userId)
+    {
+        var friendList = await _mediator.Send(new GetFriendListByUserIdQuery(userId));
+        return Ok(friendList);
+    }
     [HttpDelete("{friendId:int}")]
     public async Task<ActionResult> RemoveFriendById(int friendId)
     {
