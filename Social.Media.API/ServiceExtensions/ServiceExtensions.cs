@@ -11,5 +11,6 @@ public static class ServiceExtensions
         service.AddMediatR(typeof(Program));
         service.AddTransient<IUnitOfWork, UnitOfWork>();
         service.AddTransient<IUserRepository, UserRepository>();
+        service.AddTransient<IFriendRepository, FriendsRepository>();
     }
 }

@@ -22,7 +22,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> AddProduct([FromBody] User user)
+    public async Task<ActionResult> AddUser([FromBody] User user)
     {
         var userToReturn = await _mediator.Send(new AddUserCommand(user));
         return Ok(user);

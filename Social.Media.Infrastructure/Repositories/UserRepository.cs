@@ -98,4 +98,15 @@ public class UserRepository : IUserRepository
             return result;
         }
     }
+
+    public async Task<User> GetUserByEmail(string email)
+    {
+        var sql = "SELECT TOP 1 * FROM Users WHERE Email = @Email";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var result = await connection.QueryFirstOrDefaultAsync<User>(sql, new { Email = email });
+            return result;
+        }
+    }
 }
