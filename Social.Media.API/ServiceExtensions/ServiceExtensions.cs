@@ -13,5 +13,6 @@ public static class ServiceExtensions
         service.AddTransient<IUserRepository, UserRepository>();
         service.AddTransient<IFriendRepository, FriendsRepository>();
         service.AddTransient<IFeedRepository, FeedRepository>();
+        service.AddTransient<ILikesRepository, LikesRepository>();
     }
 }

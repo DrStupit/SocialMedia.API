@@ -43,4 +43,13 @@ public class FeedController : ControllerBase
         var postToUpdate = await _mediator.Send(new UpdatePostCommand(post));
         return Ok(postToUpdate);
     }
+
+    [HttpPost("like")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult> LikePost(Likes like)
+    {
+        var postToLike = await _mediator.Send(new AddLikeCommand(like));
+        return Ok(postToLike);
+    }
 }
