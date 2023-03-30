@@ -46,6 +46,24 @@ public class UserController : ControllerBase
                         //this is a valid token
                         user.Token = retrievedToken.Token;
                     }
+                    else
+                    {
+                        token = JwtHelper.GenTokenKey(new UserToken()
+                        {
+                            EmailAddress = user.Email,
+                            GuidId = Guid.NewGuid(),
+                            Id = user.Id,
+                        }, _jwtSettings);
+                
+                        var jwtUser = new UserTokens
+                        {
+                            Token = token.Token,
+                            Expiration_Time = DateTime.UtcNow.AddDays(1),
+                            UserId = user.Id
+                        };
+                        await _mediator.Send(new AddJwtTokenCommand(jwtUser));
+                        user.Token = token.Token;
+                    }
                 }
                 else
                 {

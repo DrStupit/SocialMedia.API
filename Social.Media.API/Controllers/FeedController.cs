@@ -62,10 +62,31 @@ public class FeedController : ControllerBase
     }
 
     [HttpPost("unlike/{postId:int}/{userId:int}")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
     public async Task<ActionResult> UnlikePost(int postId, int userId)
     {
         var unlikePost = await _mediator.Send(new UnlikePostCommand(postId, userId));
         return Ok();
     }
+
+    [HttpPost("comment")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult> Comment(Comments comment)
+    {
+        var commentPost = await _mediator.Send(new AddCommentCommand(comment));
+        return Ok(commentPost);
+    }
+
+    [HttpDelete("delete/comment")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult> DeleteComment(int commentId)
+    {
+        var deleteComment = await _mediator.Send(new RemoveCommentByIdCommand(commentId));
+        return Ok();
+    }
     
+
 }

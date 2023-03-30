@@ -6,4 +6,5 @@ public interface IUnitOfWork
     IFriendRepository Friends { get; set; }
     public IFeedRepository Feed { get; set; }
     ILikesRepository Likes { get; }
+    ICommentRepository Comments { get; }
 }
