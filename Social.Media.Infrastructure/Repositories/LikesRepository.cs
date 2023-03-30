@@ -75,4 +75,15 @@ public class LikesRepository :ILikesRepository
     {
         throw new NotImplementedException();
     }
+
+    public async Task<List<Likes>> GetPostLikes(int postId)
+    {
+        var sql = "SELECT * FROM PostLikes WHERE PostID = @PostId";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var result = await connection.QueryAsync<Likes>(sql, new { @PostId = postId });
+            return result.ToList();
+        }
+    }
 }

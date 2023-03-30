@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Socail.Media.Core.Models;
 using Socail.Media.Core.Models.Posts;
 using Social.Media.API.Commands;
+using Social.Media.API.Queries;
 
 namespace Social.Media.API.Controllers;
 
@@ -52,4 +53,12 @@ public class FeedController : ControllerBase
         var postToLike = await _mediator.Send(new AddLikeCommand(like));
         return Ok(postToLike);
     }
+
+    [HttpGet("likes")]
+    public async Task<ActionResult> GetPostLikes(int postId)
+    {
+        var postLikes = await _mediator.Send(new GetPostLikesByIdQuery(postId));
+        return Ok(postLikes);
+    }
+    
 }
