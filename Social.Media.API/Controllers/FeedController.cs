@@ -12,12 +12,10 @@ namespace Social.Media.API.Controllers;
 public class FeedController : ControllerBase
 {
     private readonly IMediator _mediator;
-    private readonly JwtSettings _jwtSettings;
 
-    public FeedController(IMediator mediator, JwtSettings jwtSettings)
+    public FeedController(IMediator mediator)
     {
         _mediator = mediator;
-        _jwtSettings = jwtSettings;
     }
     
     [HttpPost("upload")]
@@ -26,5 +24,23 @@ public class FeedController : ControllerBase
     {
         var feedToReturn = await _mediator.Send(new AddFeedItemCommand(feed));
         return Ok(feedToReturn);
+    }
+
+    [HttpDelete("/remove/{postId:int}")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult> DeletePost(int postId)
+    {
+        var postToRemove = await _mediator.Send(new RemovePostByIdCommand(postId));
+        return Ok();
+    }
+
+    [HttpPost("update")]
+    [Authorize(AuthenticationSchemes =
+        Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
+    public async Task<ActionResult> UpdatePost(Feed post)
+    {
+        var postToUpdate = await _mediator.Send(new UpdatePostCommand(post));
+        return Ok(postToUpdate);
     }
 }
