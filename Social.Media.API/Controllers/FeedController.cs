@@ -60,5 +60,12 @@ public class FeedController : ControllerBase
         var postLikes = await _mediator.Send(new GetPostLikesByIdQuery(postId));
         return Ok(postLikes);
     }
+
+    [HttpPost("unlike/{postId:int}/{userId:int}")]
+    public async Task<ActionResult> UnlikePost(int postId, int userId)
+    {
+        var unlikePost = await _mediator.Send(new UnlikePostCommand(postId, userId));
+        return Ok();
+    }
     
 }

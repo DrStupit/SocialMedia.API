@@ -86,4 +86,33 @@ public class LikesRepository :ILikesRepository
             return result.ToList();
         }
     }
+
+    public async Task UnlikePost(int postId, int userId)
+    {
+        // Check if post and user exist with a like
+        var checkExistsSql = "SELECT COUNT(*) FROM PostLikes " +
+                             "WHERE PostID = @PostId AND UserID = @UserId";
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("Fishbook")))
+        {
+            connection.Open();
+            var existsResult =
+                await connection.QueryFirstOrDefaultAsync<int>(checkExistsSql, new { @PostId = postId, @UserId = userId });
+            if (existsResult > 0)
+            {
+                var decrementSql = "UPDATE Feed " +
+                                   "SET LikeCount = LikeCount -1 " +
+                                   "WHERE PostID = @PostID AND UserID = @UserId";
+                var feedResult = await connection.QueryFirstOrDefaultAsync<int>(decrementSql,
+                    new { @PostID = postId, @UserID = userId });
+                if (feedResult == 0)
+                {
+                    //last part delete the postlike 
+                    var removeRecordSql = "DELETE FROM PostLikes " +
+                                          "WHERE PostID = @PostID AND UserID = @UserID";
+                    await connection.ExecuteAsync(removeRecordSql, new { @PostID = postId, @UserID = userId });
+                }
+                
+            }
+        }
+    }
 }
