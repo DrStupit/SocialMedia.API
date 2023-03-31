@@ -13,3 +13,9 @@ C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\refint\Social.Media.Application.dll
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\Social.Media.Application.pdb
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\obj\Debug\net7.0\ref\Social.Media.Application.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\System.IO.Pipelines.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Social.Media.Application\bin\Debug\net7.0\Microsoft.Extensions.Features.dll

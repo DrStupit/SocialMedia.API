@@ -10,3 +10,10 @@ C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\refint\Socail.Media.Core.dll
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.pdb
 C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\ref\Socail.Media.Core.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\System.IO.Pipelines.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+C:\Users\kerev.reddy\RiderProjects\Social.Media.API\Socail.Media.Core\obj\Debug\net7.0\Socail.Media.Core.csproj.CopyComplete

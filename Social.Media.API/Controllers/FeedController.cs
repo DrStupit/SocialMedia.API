@@ -13,20 +13,50 @@ namespace Social.Media.API.Controllers;
 public class FeedController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly IWebHostEnvironment _env;
 
-    public FeedController(IMediator mediator)
+    public FeedController(IMediator mediator, IWebHostEnvironment env)
     {
         _mediator = mediator;
+        _env = env;
     }
     
     [HttpPost("upload")]
     [Authorize(AuthenticationSchemes = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
-    public async Task<ActionResult> AddFeed([FromBody] Feed feed)
+    public async Task<ActionResult> AddFeed([FromForm] FeedRequest feed)
     {
-        var feedToReturn = await _mediator.Send(new AddFeedItemCommand(feed));
+        if (feed.ImageFile == null || feed.ImageFile.Length == 0)
+        {
+            return BadRequest($"Please select and image to upload");
+        }
+
+        var fileName = Guid.NewGuid().ToString() + "_" + feed.UserId;
+                       Path.GetExtension(feed.ImageFile.FileName);
+        var filePath = Path.Combine("C:\\FishbookRepo", "Uploads", fileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await feed.ImageFile.CopyToAsync(stream);
+        }
+        var imageUrl = "/Uploads/" + fileName;
+
+        var feedItem = new Feed()
+        {
+            UserId = feed.UserId,
+            Caption = feed.Caption,
+            ImageURL = imageUrl,
+            Location = feed.Location,
+            FishingMethod = feed.FishingMethod,
+            CreatedDate = DateTime.Now,
+            ModifiedDate = DateTime.Now,
+            CommentCount = 0,
+            LikeCount = 0,
+            PostDate = DateTime.Now
+        };
+        
+        var feedToReturn = await _mediator.Send(new AddFeedItemCommand(feedItem));
         return Ok(feedToReturn);
     }
-
+    
     [HttpDelete("/remove/{postId:int}")]
     [Authorize(AuthenticationSchemes =
         Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
